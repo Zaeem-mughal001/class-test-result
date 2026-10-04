@@ -7,7 +7,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
 HOST = "0.0.0.0"
-PORT = 8000
+PORT = int(os.environ.get("PORT", 8000))
 
 # CHANGE THESE TWO VALUES to your own codes. Keep the quotation marks.
 TEACHER_ACCESS_CODE = "admin1234"
