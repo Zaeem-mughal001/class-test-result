@@ -10,8 +10,8 @@ HOST = "0.0.0.0"
 PORT = 8000
 
 # CHANGE THESE TWO VALUES to your own codes. Keep the quotation marks.
-TEACHER_ACCESS_CODE = "482917"
-STUDENT_PIN = "735204"
+TEACHER_ACCESS_CODE = "admin1234"
+STUDENT_PIN = "user1234"
 
 DB_FILE = "class_test_result.db"
 sessions = {}
