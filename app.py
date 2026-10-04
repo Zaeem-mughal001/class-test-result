@@ -178,9 +178,11 @@ function js(v){return String(v??'').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}
 </body></html>'''
 
 def db():
-    con=sqlite3.connect(DB_FILE)
+    con=sqlite3.connect(DB_FILE, timeout=10)
     con.row_factory=sqlite3.Row
     con.execute("PRAGMA foreign_keys=ON")
+    con.execute("PRAGMA journal_mode=WAL")
+    con.execute("PRAGMA busy_timeout=10000")
     return con
 
 def init_db():
